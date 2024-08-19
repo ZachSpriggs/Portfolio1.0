@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "@/styles/Projects.module.scss";
 import NodeJS from "@/logos/nodejs.svg";
@@ -16,80 +16,95 @@ import Next from "@/logos/next.svg";
 import SQL from "@/logos/sql.svg";
 import Snowflake from "@/logos/snowflake.svg";
 
+const technologyIcons = {
+  NodeJS, Android, Django, Figma, Mongo, Python, ReactIcon, Sass, Vue, Next, SQL, Snowflake
+};
+
 function ProjectCard({
   title,
   description,
   technologies,
   elevator_pitch,
   team_size,
-  isActive,
-  onFlip,
-  index,
+  team
 }) {
+  const [isFlipped, setIsFlipped] = useState(false);
 
-  const [isFlipped, setIsFlipped] = useState(false)
   const handleFlip = () => {
-    setIsFlipped(!isFlipped)
-  }
+    setIsFlipped(!isFlipped);
+  };
 
   return (
-    <div className={styles.projectCard} onClick={handleFlip}>
-      <div className={`${styles.cardInner} ${isFlipped ? styles.flipped : ''}`}>
-        <div className={`${styles.cardFace} ${styles.cardFront}`}>
-          <h3>{title}</h3>
+    <div className={styles.flipCard} onClick={handleFlip}>
+      <div className={`${styles.flipCardInner} ${isFlipped ? styles.flipped : ''}`}>
+        <div className={styles.flipCardFront}>
+          <div className={styles.titleBar}>
+            <h3>{title}</h3>
+          </div>
+          <p className={styles.elevatorPitch}>{elevator_pitch}</p>
+          <div className={styles.technologiesGrid}>
+            {technologies.map((tech, index) => (
+              <Image key={index} src={technologyIcons[tech]} alt={tech} width={30} height={30} />
+            ))}
+          </div>
         </div>
-        <div className={`${styles.cardFace} ${styles.cardBack}`}>
+        <div className={styles.flipCardBack}>
           <h3>{title}</h3>
           <p>{description}</p>
+          <div className={styles.teamSize}>
+            <h4>{team} Project</h4>
+            {team_size.map((member, index) => (
+              <p key={index}>{member}</p>
+            ))}
+          </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default function Projects() {
-  const [activeCardIndex, setActiveCardIndex] = useState(null);
-
-  const handleFlip = (index) => {
-    setActiveCardIndex(activeCardIndex === index ? null : index);
-  };
-
   const projects = [
     {
       title: "Legacy codebase rewrite",
       elevator_pitch: "Rewrote vue codebase in react",
       description:
         "After many internal frustrations, we switch our CMS from WordPress to Plasmic. Once we made the switch, we realized how much bloat we had in our Vue codebase. Much of it was deprecated and the javascript was lacking clarity. Our team decided to rewrite the entire frontend in React.",
-      team_size: ["Developer(s): Me", "UI/UX Designer", "Art Director"],
-      technologies: [Vue, ReactIcon, Sass, Figma],
+      team_size: ["Developer: Me"],
+      technologies: ["Vue", "ReactIcon", "Sass", "Figma"],
+      team: "Solo",
     },
     {
       title: "Mama Restaurant Group",
       elevator_pitch: "Rewrote vue codebase in react",
       description: "Full description of the project...",
-      team_size: ["Developer(s): Me", "UI/UX Designer", "Art Director"],
+      team_size: ["Developer: Me", "UI/UX Designer", "Art Director"],
       technologies: [NodeJS],
+      team: "Design Team(3)",
     },
     {
       title: "VUniverse",
       elevator_pitch: "Rewrote vue codebase in react",
       description: "Full description of the project...",
-      team_size: ["Developer(s): Me", "UI/UX Designer", "Art Director"],
+      team_size: ["Frontend: Me", "Backend: Senior Developer"],
       technologies: [NodeJS],
+      team: "Dev Team(2)",
     },
     {
       title: "FundStory",
       elevator_pitch: "Rewrote vue codebase in react",
       description: "Full description of the project...",
-      team_size: ["Developer(s): Me", "UI/UX Designer", "Art Director"],
+      team_size: ["Full Stack: Me", "Full Stack: Senior Engineer"],
       technologies: [NodeJS],
+      team: "Dev Team(2)",
     },
     {
       title: "SmartGoals",
       elevator_pitch: "Rewrote vue codebase in react",
       description: "Full description of the project...",
-      team_size: ["Developer(s): Me", "UI/UX Designer", "Art Director"],
+      team_size: [""],
       technologies: [NodeJS],
+      team: "Dev Team(4)",
     },
     {
       title: "Operations Analytics",
@@ -97,6 +112,7 @@ export default function Projects() {
       description: "Full description of the project...",
       team_size: ["Developer(s): Me", "UI/UX Designer", "Art Director"],
       technologies: [NodeJS],
+      team: "Solo",
     },
     {
       title: "Wavy Skincare",
@@ -104,6 +120,7 @@ export default function Projects() {
       description: "Full description of the project...",
       team_size: ["Developer(s): Me", "UI/UX Designer", "Art Director"],
       technologies: [NodeJS],
+      team: "Solo",
     },
     {
       title: "This website!",
@@ -111,11 +128,10 @@ export default function Projects() {
       description: "Full description of the project...",
       team_size: ["Developer(s): Me", "UI/UX Designer", "Art Director"],
       technologies: [NodeJS],
+      team: "Solo",
     },
-    // Add more projects as needed
+
   ];
-
-
 
   return (
     <div className={styles.section}>
@@ -129,5 +145,5 @@ export default function Projects() {
         ))}
       </div>
     </div>
-  )
+  );
 }
