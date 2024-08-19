@@ -26,69 +26,17 @@ function ProjectCard({
   onFlip,
   index,
 }) {
-  const cardRef = useRef(null);
-  const [style, setStyle] = useState({});
 
+  const [isFlipped, setIsFlipped] = useState(false)
   const handleFlip = () => {
-    if (!isActive) {
-      const card = cardRef.current;
-      const rect = card.getBoundingClientRect();
-      const viewportWidth = window.innerWidth;
-      const viewportHeight = window.innerHeight;
-      
-      const centerX = viewportWidth / 2 - rect.width / 2;
-      const centerY = viewportHeight / 2 - rect.height / 2;
-      const translateX = centerX - rect.left;
-      const translateY = centerY - rect.top;
-
-      setStyle({
-        transform: `translate(${translateX}px, ${translateY}px) rotateY(180deg)`,
-      });
-    } else {
-      setStyle({});
-    }
-    onFlip(index);
-  };
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (isActive) {
-        handleFlip();
-        handleFlip();
-      }
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [isActive]);
+    setIsFlipped(!isFlipped)
+  }
 
   return (
-    <div className={`${styles.projectCard} ${isActive ? styles.activeCard : ''}`} ref={cardRef}>
-      <div
-        className={`${styles.cardInner} ${isActive ? styles.flipped : ""}`}
-        style={style}
-        onClick={handleFlip}
-      >
+    <div className={styles.projectCard} onClick={handleFlip}>
+      <div className={`${styles.cardInner} ${isFlipped ? styles.flipped : ''}`}>
         <div className={`${styles.cardFace} ${styles.cardFront}`}>
-          <div className={styles.cardContent}>
-            <p className={styles.elevatorPitch}>{elevator_pitch}</p>
-            <ul className={styles.teamSize}>
-              {team_size && team_size.map((member, index) => (
-                <li key={index}>{member}</li>
-              ))}
-            </ul>
-            <div className={styles.logos}>
-              {technologies && technologies.map((logo, index) => (
-                <Image
-                  key={index}
-                  src={logo}
-                  height={24}
-                  width={24}
-                  alt="Logo for technology used"
-                />
-              ))}
-            </div>
-          </div>
-          <h3 className={styles.cardTitle}>{title}</h3>
+          <h3>{title}</h3>
         </div>
         <div className={`${styles.cardFace} ${styles.cardBack}`}>
           <h3>{title}</h3>
@@ -96,7 +44,7 @@ function ProjectCard({
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default function Projects() {
@@ -177,12 +125,9 @@ export default function Projects() {
           <ProjectCard 
             key={index} 
             {...project} 
-            isActive={activeCardIndex === index}
-            onFlip={handleFlip}
-            index={index}
           />
         ))}
       </div>
     </div>
-  );
+  )
 }
