@@ -1,23 +1,15 @@
-$color-primary: #1a1a1a;
-$color-secondary: #f0f0f0;
-$color-accent: #ff6b6b;
 $color-text: black;
-$color-background: #FFFF00;
+$color-background: yellow;
 
 // Breakpoints
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
 
-:root {
-  --navbar-height: 4rem;
-}
-
 html,
 body {
   scroll-snap-type: x mandatory;
-  overflow-y: scroll;
-  font-family: "Arial", sans-serif;
   color: $color-text;
+  // overflow-y: scroll;
   font-size: 16px;
   padding: 0;
   margin: 0;
@@ -27,18 +19,21 @@ body {
 @media (min-width: $breakpoint-tablet) {
   html,
   body {
-    font-size: 18px; // Slightly larger font size for tablets and up
+    font-size: 20px; 
+    // overflow-y: scroll;
   }
 }
 
+
 .section {
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
   padding: 1rem;
+  // margin: 0 3rem;
   flex-direction: column;
   justify-content: center;
-  &:first-of-type {
-    min-height: calc(60vh - var(--navbar-height));
+  &:first-child {
+    margin-top: 4rem;
   }
 }
 
@@ -46,7 +41,7 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 1rem;
 }
 
 .hidden-mobile {
@@ -60,22 +55,7 @@ body {
   .hidden-desktop {
     display: none;
   }
+  .section{
+    margin: 3rem;
+  }
 }
-
-// Save for individual section styles 
-
-// #who-i-am {
-//   background: linear-gradient(#090947, #430061);
-// }
-
-// #work-experience {
-//   background: linear-gradient(#430061, #090947);
-// }
-
-// #projects {
-//   background: linear-gradient(#090947, #430061);
-// }
-
-// #contact {
-//   background: linear-gradient(#430061, #090947);
-// }

@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <nav className={`${styles.navbar} ${isOpen ? styles.open : ''}`}>
       <div className={styles.navbarContainer}>
-        <div className={styles.logo}>Zach Spriggs</div>
+        <Link className={styles.logo} href="#whoIAm">Zach Spriggs</Link>
         <div className={`${styles.navItems} ${isOpen ? styles.open : ''}`}>
           <Link href="#who-i-am" className={styles.navItem} onClick={() => setIsOpen(false)}>Who I Am</Link>
           <Link href="#work-experience" className={styles.navItem} onClick={() => setIsOpen(false)}>Work Experience</Link>

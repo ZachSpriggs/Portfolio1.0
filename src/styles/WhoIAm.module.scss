@@ -1,61 +1,54 @@
-// const projects = [
-//     {
-//       title: "Legacy codebase rewrite",
-//       elevator_pitch: "Rewrote vue codebase in react",
-//       description:
-//         "After many internal frustrations, we switch our CMS from WordPress to Plasmic. Once we made the switch, we realized how much bloat we had in our Vue codebase. Much of it was deprecated and the javascript was lacking clarity. Our team decided to rewrite the entire frontend in React.",
-//       team_size: ["Developer(s): Me", "UI/UX Designer", "Art Director"],
-//       technologies: [Vue, ReactIcon, Sass, Figma],
-//     },
-//     {
-//       title: "Mama Restaurant Group",
-//       elevator_pitch: "Rewrote vue codebase in react",
-//       description: "Full description of the project...",
-//       team_size: ["Developer(s): Me", "UI/UX Designer", "Art Director"],
-//       technologies: [NodeJS],
-//     },
-//     {
-//       title: "VUniverse",
-//       elevator_pitch: "Rewrote vue codebase in react",
-//       description: "Full description of the project...",
-//       team_size: ["Developer(s): Me", "UI/UX Designer", "Art Director"],
-//       technologies: [NodeJS],
-//     },
-//     {
-//       title: "FundStory",
-//       elevator_pitch: "Rewrote vue codebase in react",
-//       description: "Full description of the project...",
-//       team_size: ["Developer(s): Me", "UI/UX Designer", "Art Director"],
-//       technologies: [NodeJS],
-//     },
-//     {
-//       title: "SmartGoals",
-//       elevator_pitch: "Rewrote vue codebase in react",
-//       description: "Full description of the project...",
-//       team_size: ["Developer(s): Me", "UI/UX Designer", "Art Director"],
-//       technologies: [NodeJS],
-//     },
-//     {
-//       title: "Operations Analytics",
-//       elevator_pitch: "Rewrote vue codebase in react",
-//       description: "Full description of the project...",
-//       team_size: ["Developer(s): Me", "UI/UX Designer", "Art Director"],
-//       technologies: [NodeJS],
-//     },
-//     {
-//       title: "Wavy Skincare",
-//       elevator_pitch: "Rewrote vue codebase in react",
-//       description: "Full description of the project...",
-//       team_size: ["Developer(s): Me", "UI/UX Designer", "Art Director"],
-//       technologies: [NodeJS],
-//     },
-//     {
-//       title: "This website!",
-//       elevator_pitch: "Rewrote vue codebase in react",
-//       description: "Full description of the project...",
-//       team_size: ["Developer(s): Me", "UI/UX Designer", "Art Director"],
-//       technologies: [NodeJS],
-//     },
-//     // Add more projects as needed
-//   ];
+.whoIAm{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
 
+.left {
+  border: 3px solid black;
+  box-shadow: 14px 14px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+.profilePic {
+  border-radius: 8px !important;
+  height: 4rem;
+  width: 2rem;
+}
+
+.Image {
+  border: 3px solid black;
+  box-shadow: 14px 14px 20px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width:768px) {
+  .whoIAm {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .Image {
+    width: 250px;
+    height: 400px;
+    object-fit: cover;
+  }
+  .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+
+  };
+
+}
