@@ -56,8 +56,8 @@ function ProjectCard({
             <h3>{title}</h3>
           </div>
           <strong className={styles.elevatorPitch}>{elevator_pitch}</strong>
-          <strong>Time Line: {duration}</strong>
           <div className={styles.teamSize}>
+            <strong>Time Line: {duration}</strong>
             <h4>{team} Project</h4>
             {team_size.map((member, index) => (
               <p key={index}>{member}</p>
@@ -78,7 +78,6 @@ function ProjectCard({
         <div className={styles.flipCardBack}>
           <h3>{title}</h3>
           <strong>{description}</strong>
-          
         </div>
       </div>
     </div>
@@ -97,8 +96,7 @@ export default function Projects() {
       title: "Legacy codebase rewrite",
       elevator_pitch: "Rewrote legacy Vue codebase in React",
       duration: "6 Weeks",
-      description: 
-        `After many internal frustrations, we switch our CMS from WordPress to Plasmic. Once we made the switch, 
+      description: `After many internal frustrations, we switch our CMS from WordPress to Plasmic. Once we made the switch, 
         we realized how much bloat we had in our Vue codebase. Much of it was deprecated and 
         the javascript was lacking clarity. Our team decided to rewrite the entire frontend in React.
         I had to maintain our current Vue codebase and make sure new features were up to date, while simultaneously
@@ -122,7 +120,8 @@ export default function Projects() {
     },
     {
       title: "VUniverse",
-      elevator_pitch: "Frontend Development for streaming service in React Native",
+      elevator_pitch:
+        "Frontend Development for streaming service in React Native",
       duration: "20 Weeks",
       description: `Utlized Figma templates to create the frontend for a streaming service application with React-Native.
       I had no React-Native experience coming into this project, but using the documentation to teach myself, I was able to 
@@ -130,7 +129,7 @@ export default function Projects() {
       before I got to see the finalized product, but this project taught me a lot about mobile development, as well as adopting 
       new technologies and how to approach learning a new framework/stack.
       `,
-      team_size: ["Frontend: Me", "Backend: Senior Developer"],
+      team_size: ["Frontend: Myself", "Backend: Senior Developer"],
       technologies: ["ReactIcon", "Figma", "Sass"],
       team: "Dev Team(2)",
     },
@@ -143,7 +142,7 @@ export default function Projects() {
       the next seed round. This was a full stack MERN project, using Redux for state management, 
       as well as Python to automate some of the daily tasks. 
       `,
-      team_size: ["Full Stack: Me", "Full Stack: Senior Engineer"],
+      team_size: ["Full Stack: Myself", "Full Stack: Senior Engineer"],
       technologies: ["NodeJS", "ReactIcon", "Mongo", "Figma", "Sass", "Python"],
       team: "Dev Team(2)",
     },
@@ -163,7 +162,8 @@ export default function Projects() {
     },
     {
       title: "Operations Analytics",
-      elevator_pitch: "Metrics analysis and automation for Operations teams at DoorDash",
+      elevator_pitch:
+        "Metrics analysis and automation for Operations teams at DoorDash",
       duration: "4 Weeks",
       description: `Working closely with Local Operations teams at DoorDash, I wanted to take some of the manual
       tasks away from Operations Managers. I created an automated reporting system utilizing Django and SQL queries
