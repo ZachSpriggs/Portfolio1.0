@@ -9,6 +9,8 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'src', 'styles')],
   },
+  output: "export",  
+  reactStrictMode: true,
   webpack: (config) => {
     config.resolve.alias['@'] = path.join(__dirname, 'src');
     return config;

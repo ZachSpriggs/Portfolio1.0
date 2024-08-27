@@ -8,7 +8,7 @@ import Android from "@/logos/android.svg";
 import Django from "@/logos/django.svg";
 import Figma from "@/logos/figma.svg";
 import Mongo from "@/logos/mongo.svg";
-import Python from "@/logos/Python.svg";
+import Python from "@/logos/python.svg";
 import ReactIcon from "@/logos/react.svg";
 import Sass from "@/logos/sass.svg";
 import Vue from "@/logos/vue.svg";

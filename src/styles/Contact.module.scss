@@ -28,6 +28,10 @@
   justify-content: center;
   align-items: center;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+  & a {
+    color: black;
+    text-decoration: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -45,5 +49,10 @@
     width: calc(100vw - 18%);
     min-height: 100px; 
     box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.5);
+
+    & a {
+      color: #7df9ff;
+      text-decoration: none;
+    }
   }
 }
