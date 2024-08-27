@@ -1,14 +1,31 @@
-import styles from '@/styles/WorkExperience.module.scss'
+import styles from "@/styles/WorkExperience.module.scss";
 
-
-function experienceCard(title, company, technologies, duration, role, termination) {
-
+function ExperienceCard({
+  title,
+  company,
+  technologies,
+  duration,
+  role,
+  termination,
+}) {
   return (
-    <div>
-
+    <div className={styles.flipCard}>
+      <div className={styles.flipCardInner}>
+        <div className={styles.titleBar}>
+          <h3>{title}</h3>
+        </div>
+        <div className={styles.content}>
+          <p><strong>Company:</strong> {company}</p>
+          <p><strong>Technologies:</strong> {technologies.join(", ")}</p>
+          <p><strong>Time In Role:</strong> {duration}</p>
+          <p><strong>Employment Type:</strong> {role}</p>
+          <p><strong>Reason For Leaving:</strong> {termination || "N/A"}</p>
+        </div>
+        <div className={styles.footerBar}></div>
+      </div>
     </div>
-  )
-};
+  );
+}
 export default function WorkExperience() {
   const jobs = [
     {
@@ -17,7 +34,7 @@ export default function WorkExperience() {
       technologies: ["C#", "SQL Server"],
       duration: "Feb 2024 - Present",
       role: "Part Time",
-      termination: ""
+      termination: "",
     },
     {
       title: "Site Engineer",
@@ -25,7 +42,7 @@ export default function WorkExperience() {
       technologies: ["Python", "Django", "SQL", "Snowflake", "Mode Analytics"],
       duration: "Aug 2023 - ",
       role: "Full Time",
-      termination: "Lay Off"
+      termination: "Lay Off",
     },
     {
       title: "Lead Full Stack Engineer",
@@ -33,7 +50,7 @@ export default function WorkExperience() {
       technologies: ["NodeJS", "Vue", "React", "Figma", "Express", "Mongo"],
       duration: "Nov 2021 - June 2023",
       role: "Full Time",
-      termination: "Lay Off"
+      termination: "Lay Off",
     },
     {
       title: "Mobile Developer",
@@ -41,23 +58,31 @@ export default function WorkExperience() {
       technologies: ["React-Native", "Figma"],
       duration: "May 2021 - November 2021",
       role: "Contract",
-      termination: "Contract ended"
+      termination: "Contract ended",
     },
     {
-      title: "Web Developer",
+      title: "Frontend Developer",
       company: "Barntools",
       technologies: ["React", "WordPress"],
       duration: "June 2021 - August 2021",
       role: "Contract",
-      termination: "Contract ended"
+      termination: "Contract ended",
     },
     {
       title: "Full Stack Engineer",
       company: "FundStory",
-      technologies: ["React", "Express", "NodeJS", "Mongo", "Redux", "Figma", "Python"],
+      technologies: [
+        "React",
+        "Express",
+        "NodeJS",
+        "Mongo",
+        "Redux",
+        "Figma",
+        "Python",
+      ],
       duration: "May 2021 - November 2021",
       role: "Full Time",
-      termination: "New Full time position"
+      termination: "New Full time position",
     },
     {
       title: "Teaching Assistant",
@@ -65,24 +90,17 @@ export default function WorkExperience() {
       technologies: ["MERN", "Java/Springboot", "Python/Flask/Django"],
       duration: "February 2021 - June 2021",
       role: "Part Time",
-      termination: "Better position"
+      termination: "Better position",
     },
-  ]
+  ];
   return (
-    <div className={styles.workExperience}>
+    <div className={styles.workExperienceWrapper}>
       <h2>Employment</h2>
-      {/* {jobs.map((job) => {
-        <ul>
-        <li>{job.title}</li>
-        <li>{job.company}</li>
-        {jobs.technologies.map((tech) => {
-          <li>{tech}</li>
-        })}
-        <li>{job.duration}</li>
-        <li>{job.role}</li>
-        <li>{job.termination}</li>
-        </ul>
-      })} */}
+      <div className={styles.workExperience}>
+        {jobs.map((job, index) => (
+          <ExperienceCard key={index} {...job} />
+        ))}
+      </div>
     </div>
-  )
+  );
 }
