@@ -13,7 +13,7 @@ export default function WhoIAm() {
           my preference is backend utilizing Python or Node 
           because of the problem solving involved. I&apos;m most 
           familiar with Javascript and Python, but am comfortable in Java, 
-          C#, and Typescript. I also have an active secret security clearnace.
+          C#, and Typescript. I also have an active secret security clearance.
         </p>
       </div>
       <div className={styles.right}>
