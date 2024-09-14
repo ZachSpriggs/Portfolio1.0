@@ -9,18 +9,20 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
   gap: 2rem;
-  padding: 2rem;
+  padding: 0 .5rem;
+  padding-left: 0;
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
 }
 
 .flipCard {
-  background-color: transparent;
+  background-color: var(--bg-color);
   width: 100%;
   height: 500px;
   perspective: 1000px;
   cursor: pointer;
+
 }
 
 .flipCardInner {
@@ -31,7 +33,6 @@
   transition: transform 0.8s;
   border: 5px solid black;
   transform-style: preserve-3d;
-  box-shadow: 14px 14px 20px rgba(0, 0, 0, 0.5);
 }
 
 .flipCard.isFlipped .flipCardInner,
@@ -53,13 +54,13 @@
 }
 
 .flipCardFront {
-  background-color: white;
-  color: black;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 
 .flipCardBack {
-  background-color: #7df9ff;
+  background-color: var(--bg-color);
   color: black;
   transform: rotateY(180deg);
   justify-content: space-evenly;
@@ -69,8 +70,8 @@
 }
 
 .titleBar {
-  background-color: #FF00F5;
-  color: white;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   padding: 0.5rem;
   width: 100%;
 
@@ -98,7 +99,7 @@
   justify-content: space-evenly;
   gap: 0.5rem;
   padding: 0.5rem;
-  background-color: #FF00F5;
+  background-color: var(--bg-color);
 }
 
 .teamSize {

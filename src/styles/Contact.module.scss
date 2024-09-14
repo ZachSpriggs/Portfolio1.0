@@ -2,13 +2,13 @@
   min-height: 20vh;
   display: flex;
   flex-direction: column;
-  padding: 20px 0; 
+  // padding: 20px 0; 
 }
 
 .contactGrid {
   display: flex;
-  justify-content: center;
-  align-items: stretch;
+  justify-content: start;
+  align-items: left;
   flex-wrap: wrap;
   gap: 20px; 
 }
@@ -27,7 +27,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+  // box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
   & a {
     color: black;
     text-decoration: none;
@@ -48,7 +48,7 @@
   .contactCard {
     width: calc(100vw - 18%);
     min-height: 100px; 
-    box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.5);
+    // box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.5);
 
     & a {
       color: black;
