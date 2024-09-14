@@ -1,30 +1,18 @@
-.whoIAm{
+.whoIAm {
   display: flex;
-  justify-content: space-evenly;
   margin-top: 2rem;
+
+  & h1 {
+    font-size: 52px;
+  }
+}
+.description {
+  width: 60vw;
+  font-weight: 600;
+  line-height: 24pt;
 }
 
-.left {
-  border: 3px solid black;
-  box-shadow: 14px 14px 20px rgba(0, 0, 0, 0.4);
-  padding: 1rem;
-  height: 560px;
-  margin-right: 1rem;
-}
-
-
-.profilePic {
-  border-radius: 8px !important;
-  height: 4rem;
-  width: 2rem;
-}
-
-.Image {
-  border: 3px solid black;
-  box-shadow: 14px 14px 20px rgba(0, 0, 0, 0.4);
-}
-
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .whoIAm {
     display: flex;
     justify-content: space-evenly;
@@ -41,18 +29,11 @@
   .left {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
     margin-bottom: 40px;
     margin-right: 0;
+    .description {
+      width: 80vw;
+    }
   }
-  .right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin: 0 auto;
-
-  };
-
 }

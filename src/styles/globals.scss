@@ -1,20 +1,37 @@
 $color-text: black;
-$color-background: yellow;
-
-
+// $color-background: #e8e8e8;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
 
+:root {
+  --bg-color: #e8e8e8;
+  --text-color: #000000;
+  --navbar-bg: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  --bg-color: #1e1e1e;
+  --text-color: #ffffff;
+  --navbar-bg: #121212;
+}
+
 html,
 body {
-  color: $color-text;
+  // color: $color-text;
   overflow-y: auto;
   overflow-x: hidden;
   font-size: 16px;
   padding: 0;
   margin: 0;
-  background: $color-background;
   height: 100%; 
+  // background-color: var(--background-color);
+  // color: var(--text-color);
 }
 
 body {
@@ -68,7 +85,7 @@ html {
     display: none;
   }
   .section {
-    margin: 3rem;
+    margin: 2rem;
   }
 }
 

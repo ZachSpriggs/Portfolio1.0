@@ -15,6 +15,7 @@ import Vue from "@/logos/vue.svg";
 import Next from "@/logos/next.svg";
 import SQL from "@/logos/sql.svg";
 import Snowflake from "@/logos/snowflake.svg";
+import Project from "@/components/Project"
 
 const technologyIcons = {
   NodeJS,
@@ -39,6 +40,7 @@ function ProjectCard({
   elevator_pitch,
   team_size,
   team,
+  id
 }) {
   const [isFlipped, setIsFlipped] = useState(false);
 
@@ -93,6 +95,7 @@ export default function Projects() {
 
   const projects = [
     {
+      id: 1,
       title: "Legacy codebase rewrite",
       elevator_pitch: "Rewrote legacy Vue codebase in React",
       duration: "6 Weeks",
@@ -106,6 +109,7 @@ export default function Projects() {
       team: "Solo",
     },
     {
+      id: 2,
       title: "Mama Restaurant Group",
       elevator_pitch: "Built website(s) for restaurant group ",
       duration: "16 Weeks",
@@ -119,6 +123,7 @@ export default function Projects() {
       team: "Design Team(3)",
     },
     {
+      id: 3,
       title: "VUniverse",
       elevator_pitch:
         "Frontend Development for streaming service in React Native",
@@ -134,6 +139,7 @@ export default function Projects() {
       team: "Dev Team(2)",
     },
     {
+      id: 4,
       title: "FundStory",
       elevator_pitch: "Financial Planning and Analysis software for Founders",
       duration: "24 Weeks",
@@ -147,6 +153,7 @@ export default function Projects() {
       team: "Dev Team(2)",
     },
     {
+      id: 5,
       title: "SmartGoals",
       elevator_pitch: "Goal tracking App in Android Studio with Java",
       duration: "1 Week",
@@ -161,6 +168,7 @@ export default function Projects() {
       team: "Dev Team(4)",
     },
     {
+      id: 6,
       title: "Operations Analytics",
       elevator_pitch:
         "Metrics analysis and automation for Operations teams at DoorDash",
@@ -176,6 +184,7 @@ export default function Projects() {
       team: "Solo",
     },
     {
+      id: 7,
       title: "Wavy Skincare",
       elevator_pitch: "E-Commerce website for passion project",
       duration: "2 Weeks",
@@ -190,6 +199,7 @@ export default function Projects() {
       team: "Solo",
     },
     {
+      id: 8,
       title: "This website!",
       elevator_pitch: "My portfolio site",
       duration: "1 Day",

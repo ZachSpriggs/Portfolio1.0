@@ -1,26 +1,50 @@
-// src/components/Navbar.js
-'use client'
+import React, { useState } from "react";
+import Link from "next/link";
+import { FaLinkedin, FaGithub, FaMoon, FaSun } from "react-icons/fa";
+import styles from "../styles/Navbar.module.scss";
 
-import { useState } from 'react'
-import Link from 'next/link'
-import styles from '@/styles/Navbar.module.scss'
-
-export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
+export default function Navbar({ isDarkMode, toggleDarkMode }) {
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen)
-  }
+    setIsOpen(!isOpen);
+  };
 
   return (
-    <nav className={`${styles.navbar} ${isOpen ? styles.open : ''}`}>
+    <nav
+      className={`${styles.navbar} ${isOpen ? styles.open : ""} ${
+        isDarkMode ? styles.darkMode : ""
+      }`}
+    >
       <div className={styles.navbarContainer}>
-        <Link className={styles.logo} href="#whoIAm">Zach Spriggs</Link>
-        <div className={`${styles.navItems} ${isOpen ? styles.open : ''}`}>
-          <Link href="#who-i-am" className={styles.navItem} onClick={() => setIsOpen(false)}>Who I Am</Link>
-          <Link href="#work-experience" className={styles.navItem} onClick={() => setIsOpen(false)}>Work Experience</Link>
-          <Link href="#projects" className={styles.navItem} onClick={() => setIsOpen(false)}>Projects</Link>
-          <Link href="#contact" className={styles.navItem} onClick={() => setIsOpen(false)}>Contact</Link>
+        <Link className={styles.logo} href="#whoIAm">
+          Zach Spriggs
+        </Link>
+        <div className={`${styles.navItems} ${isOpen ? styles.open : ""}`}>
+          <Link
+            href="https://www.linkedin.com/in/zachspriggs/"
+            target="_blank"
+            className={styles.navItem}
+            onClick={() => setIsOpen(false)}
+          >
+            <FaLinkedin size={30} />
+          </Link>
+          <Link
+            href="https://github.com/ZachSpriggs"
+            target="_blank"
+            className={styles.navItem}
+            onClick={() => setIsOpen(false)}
+          >
+            <FaGithub size={30} />
+          </Link>
+            <div className={styles.navItem}>
+              <button
+                onClick={toggleDarkMode}
+                className={styles.darkModeToggle}
+              >
+                {isDarkMode ? <FaSun size={28} /> : <FaMoon size={28} />}
+              </button>
+            </div>
         </div>
         <div className={styles.hamburger} onClick={toggleMenu}>
           <div></div>
@@ -29,5 +53,5 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
-  )
+  );
 }
