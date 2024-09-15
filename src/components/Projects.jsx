@@ -94,20 +94,20 @@ export default function Projects() {
   };
 
   const projects = [
-    {
-      id: 1,
-      title: "Legacy codebase rewrite",
-      elevator_pitch: "Rewrote legacy Vue codebase in React",
-      duration: "6 Weeks",
-      description: `After many internal frustrations, we switch our CMS from WordPress to Plasmic. Once we made the switch, 
-        we realized how much bloat we had in our Vue codebase. Much of it was deprecated and 
-        the javascript was lacking clarity. Our team decided to rewrite the entire frontend in React.
-        I had to maintain our current Vue codebase and make sure new features were up to date, while simultaneously
-        reworking each component into React.`,
-      team_size: ["Developer: Myself"],
-      technologies: ["Vue", "ReactIcon", "Sass", "Figma"],
-      team: "Solo",
-    },
+    // {
+    //   id: 1,
+    //   title: "Legacy codebase rewrite",
+    //   elevator_pitch: "Rewrote legacy Vue codebase in React",
+    //   duration: "6 Weeks",
+    //   description: `After many internal frustrations, we switch our CMS from WordPress to Plasmic. Once we made the switch, 
+    //     we realized how much bloat we had in our Vue codebase. Much of it was deprecated and 
+    //     the javascript was lacking clarity. Our team decided to rewrite the entire frontend in React.
+    //     I had to maintain our current Vue codebase and make sure new features were up to date, while simultaneously
+    //     reworking each component into React.`,
+    //   team_size: ["Developer: Myself"],
+    //   technologies: ["Vue", "ReactIcon", "Sass", "Figma"],
+    //   team: "Solo",
+    // },
     {
       id: 2,
       title: "Mama Restaurant Group",
@@ -152,21 +152,21 @@ export default function Projects() {
       technologies: ["NodeJS", "ReactIcon", "Mongo", "Figma", "Sass", "Python"],
       team: "Dev Team(2)",
     },
-    {
-      id: 5,
-      title: "SmartGoals",
-      elevator_pitch: "Goal tracking App in Android Studio with Java",
-      duration: "1 Week",
-      description: `This was a team project during my coding boot camp that I did with classmates. We had learned 
-      Java during the boot camp, but decided to avoid the typical "inventory management" style apps that everyone else 
-      built. We used Android Studio to build a basic goal tracking app with progress charts, users, and goals as our models. 
-      We built out a basic database using SQLite. My biggest takeaway from this project was flushing out my understanding of 
-      mobile development and it sparked an interest in mobile development that I've had since starting this app. 
-      `,
-      team_size: ["4 Full Stack Engineers"],
-      technologies: ["Android", "SQL"],
-      team: "Dev Team(4)",
-    },
+    // {
+    //   id: 5,
+    //   title: "SmartGoals",
+    //   elevator_pitch: "Goal tracking App in Android Studio with Java",
+    //   duration: "1 Week",
+    //   description: `This was a team project during my coding boot camp that I did with classmates. We had learned 
+    //   Java during the boot camp, but decided to avoid the typical "inventory management" style apps that everyone else 
+    //   built. We used Android Studio to build a basic goal tracking app with progress charts, users, and goals as our models. 
+    //   We built out a basic database using SQLite. My biggest takeaway from this project was flushing out my understanding of 
+    //   mobile development and it sparked an interest in mobile development that I've had since starting this app. 
+    //   `,
+    //   team_size: ["4 Full Stack Engineers"],
+    //   technologies: ["Android", "SQL"],
+    //   team: "Dev Team(4)",
+    // },
     {
       id: 6,
       title: "Operations Analytics",
@@ -183,34 +183,34 @@ export default function Projects() {
       technologies: ["Python", "SQL", "Snowflake", "Django"],
       team: "Solo",
     },
-    {
-      id: 7,
-      title: "Wavy Skincare",
-      elevator_pitch: "E-Commerce website for passion project",
-      duration: "2 Weeks",
-      description: `My girlfriend absolutely loves creating. She loves art, plants, lotions, essential oils, etc.. She 
-      recently started making her own skin care products for fun. Wanting to take it more seriously, she's been contemplating 
-      selling them at farmers markets. Due to this, I used the MERN stack to create a quick ecommerce website utilizing Stripe for
-      payment processing. As of now, this project is not live because she hasn't finalized her "formula". Expected to go live 
-      one the products are fully finalized and ready to sell.  
-      `,
-      team_size: ["Developer/Designer: Myself"],
-      technologies: ["NodeJS", "Mongo", "ReactIcon", "Figma", "Sass"],
-      team: "Solo",
-    },
-    {
-      id: 8,
-      title: "This website!",
-      elevator_pitch: "My portfolio site",
-      duration: "1 Day",
-      description: `I finally decided to make my portfolio site. I've gone quite some time without one, but I wanted a central location
-      to talk through some of my career and focus on more than what I can put in a bullet point on a resume. I created the design in Figma
-      based off Neobrutalism styles. Simple frontend using NextJS, Sass for styles, and Figma for the wireframes/prototypes. 
-      `,
-      team_size: ["Developer/Designer: Myself"],
-      technologies: ["Next", "Figma", "Sass"],
-      team: "Solo",
-    },
+    // {
+    //   id: 7,
+    //   title: "Wavy Skincare",
+    //   elevator_pitch: "E-Commerce website for passion project",
+    //   duration: "2 Weeks",
+    //   description: `My girlfriend absolutely loves creating. She loves art, plants, lotions, essential oils, etc.. She 
+    //   recently started making her own skin care products for fun. Wanting to take it more seriously, she's been contemplating 
+    //   selling them at farmers markets. Due to this, I used the MERN stack to create a quick ecommerce website utilizing Stripe for
+    //   payment processing. As of now, this project is not live because she hasn't finalized her "formula". Expected to go live 
+    //   one the products are fully finalized and ready to sell.  
+    //   `,
+    //   team_size: ["Developer/Designer: Myself"],
+    //   technologies: ["NodeJS", "Mongo", "ReactIcon", "Figma", "Sass"],
+    //   team: "Solo",
+    // },
+    // {
+    //   id: 8,
+    //   title: "This website!",
+    //   elevator_pitch: "My portfolio site",
+    //   duration: "1 Day",
+    //   description: `I finally decided to make my portfolio site. I've gone quite some time without one, but I wanted a central location
+    //   to talk through some of my career and focus on more than what I can put in a bullet point on a resume. I created the design in Figma
+    //   based off Neobrutalism styles. Simple frontend using NextJS, Sass for styles, and Figma for the wireframes/prototypes. 
+    //   `,
+    //   team_size: ["Developer/Designer: Myself"],
+    //   technologies: ["Next", "Figma", "Sass"],
+    //   team: "Solo",
+    // },
   ];
 
   return (
