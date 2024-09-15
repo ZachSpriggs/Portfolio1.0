@@ -7,6 +7,10 @@ $breakpoint-desktop: 1024px;
   --bg-color: #e8e8e8;
   --text-color: #000000;
   --navbar-bg: #ffffff;
+  --card-color: #121212;
+  --card-title-color: #1e1e1e;
+  --card-text-color: #ffffff;
+  --elevator-pitch: #e8e8e8;
 }
 
 body {
@@ -19,7 +23,12 @@ body.dark-mode {
   --bg-color: #1e1e1e;
   --text-color: #ffffff;
   --navbar-bg: #121212;
+  --card-color: #e8e8e8;
+  --card-text-color: #e8e8e8;
+  --card-title-color: #121212;
+  --elevator-pitch: #121212;
 }
+
 
 html,
 body {
@@ -52,7 +61,7 @@ html {
 }
 
 .section {
-  min-height: 20vh;
+  min-height: 25vh;
   display: flex;
   padding: 1rem;
   flex-direction: column;
