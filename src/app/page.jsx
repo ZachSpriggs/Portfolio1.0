@@ -1,6 +1,5 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
 import WhoIAm from "@/components/WhoIAm";
 import WorkExperience from "@/components/WorkExperience";
 import Projects from "@/components/Projects";
