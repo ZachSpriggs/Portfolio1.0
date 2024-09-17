@@ -1,26 +1,27 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 
 const useDarkMode = () => {
-  const [isDarkMode, setIsDarkMode] = useState(
-    () => window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    // This code will only run on the client side
+    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    setIsDarkMode(darkModeMediaQuery.matches);
 
     const handleChange = (e) => {
       setIsDarkMode(e.matches);
     };
 
-    mediaQuery.addEventListener('change', handleChange);
+    darkModeMediaQuery.addListener(handleChange);
 
     return () => {
-      mediaQuery.removeEventListener('change', handleChange);
+      darkModeMediaQuery.removeListener(handleChange);
     };
   }, []);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
 
   return [isDarkMode, toggleDarkMode];
 };
