@@ -1,5 +1,3 @@
-// src/styles/Navbar.module.scss
-
 .navbar {
   display: flex;
   position: fixed;
@@ -59,7 +57,7 @@
   div {
     width: 25px;
     height: 3px;
-    background-color: black;
+    background-color: var(--text-color);
     margin: 5px 0;
     transition: all 0.8s ease;
   }
