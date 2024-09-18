@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "@/styles/Projects.module.scss";
 import { projects } from "@/data/projects";
-import Link from 'next/link';
+import Link from "next/link";
 import NodeJS from "@/logos/nodejs.svg";
 import Android from "@/logos/android.svg";
 import Django from "@/logos/django.svg";
@@ -33,38 +33,28 @@ const technologyIcons = {
   Snowflake,
 };
 
-function ProjectCard({
-  title,
-  description,
-  duration,
-  technologies,
-  elevator_pitch,
-  team_size,
-  team,
-  id
-}) {
-  const projectData = { title, description, duration, technologies, elevator_pitch, team_size, team, id };
-  const urlTitle = title.toLowerCase().replace(/\s+/g, '-');
-
+function ProjectCard({ project }) {
+  const urlTitle = project.title.toLowerCase().replace(/\s+/g, "-");
 
   return (
-    
-    <div className={styles.projectCard}>
-      <Link href={{ pathname: `/projects/${urlTitle}`, query: { project: JSON.stringify(projectData) } }}>
+    <Link href={`/projects/${urlTitle}`}>
+      <div className={styles.projectCard}>
         <div className={styles.cardFront}>
           <div className={styles.titleBar}>
-            <h3>{title}</h3>
+            <h3>{project.title}</h3>
           </div>
-          <strong className={styles.elevatorPitch}>{elevator_pitch}</strong>
+          <strong className={styles.elevatorPitch}>
+            {project.elevator_pitch}
+          </strong>
           <div className={styles.teamSize}>
-            <strong>Time Line: {duration}</strong>
-            <h4>{team} Project</h4>
-            {team_size.map((member, index) => (
+            <strong>Time Line: {project.duration}</strong>
+            <h4>{project.team} Project</h4>
+            {project.team_size.map((member, index) => (
               <p key={index}>{member}</p>
             ))}
           </div>
           <div className={styles.technologiesGrid}>
-            {technologies.map((tech, index) => (
+            {project.technologies.map((tech, index) => (
               <Image
                 key={index}
                 src={technologyIcons[tech]}
@@ -75,9 +65,8 @@ function ProjectCard({
             ))}
           </div>
         </div>
-        
-      </Link>
       </div>
+    </Link>
   );
 }
 
@@ -85,7 +74,7 @@ export default function Projects() {
   return (
     <div className={styles.projectsContainer}>
       {projects.map((project) => (
-        <ProjectCard key={project.id} {...project}/>
+        <ProjectCard project={project} key={project.id}/>
       ))}
     </div>
   );

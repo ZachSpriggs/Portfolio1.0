@@ -9,7 +9,6 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'src', 'styles')],
   },
-  output: "export",  
   reactStrictMode: true,
   swcMinify: true,
   images: {
@@ -18,6 +17,14 @@ const nextConfig = {
   webpack: (config) => {
     config.resolve.alias['@'] = path.join(__dirname, 'src');
     return config;
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/projects/:projectName',
+        destination: '/projects/[projectName]',
+      },
+    ];
   },
 };
 

@@ -7,6 +7,7 @@ import Contact from "@/components/Contact";
 import "@/styles/globals.scss";
 import { Montserrat } from "next/font/google";
 import useDarkMode from './hooks/darkMode'
+import ProjectsTest from "@/components/ProjectTest";
 
 const monts = Montserrat({ subsets: ["latin"] });
 
@@ -23,6 +24,9 @@ export default function Home() {
         `}
       </style>
       <main>
+      <section className="section" id="projects">
+          <ProjectsTest />
+        </section>
         <section className="section" id="who-i-am">
           <WhoIAm />
         </section>
@@ -32,9 +36,9 @@ export default function Home() {
         <section className="section" id="work-experience">
           <WorkExperience />
         </section>
-        <section className="section" id="contact">
+        {/* <section className="section" id="contact">
           <Contact />
-        </section>
+        </section> */}
       </main>
     </div>
   );

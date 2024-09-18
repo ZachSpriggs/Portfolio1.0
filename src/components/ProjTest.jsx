@@ -1,20 +1,21 @@
-import React, {useState} from 'react'
-import projects from '../data/projects'
-
+import React from 'react'
+import Navbar from '@/components/Navbar';
+import Contact from '@/components/Contact';
 
 const ProjTest = (project) => {
-
-  const [proj, setProj] = useState();
-
-  if(project.id in projects){
-    setProj(projects[project.id])
+  console.log('ProjectTest component - Received project:', project);
+  
+  if (!project) {
+    return <div>No project data available</div>;
   }
-
   return (
-    <div>
-
+    <div className={isDarkMode ? 'dark-mode' : 'light-mode'}>
+      <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+      <h1>{project.title}</h1>
+      <p>{project.description}</p>
+      <Contact />
     </div>
   )
 }
 
-export default ProjTest
+export default ProjTest;
