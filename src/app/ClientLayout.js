@@ -1,24 +1,20 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Navbar from '../components/Navbar'  // Adjust the import path as needed
+import Navbar from '@/components/Navbar'
+import Contact from '@/components/Contact'
 
 export default function ClientLayout({ children }) {
   const [isDarkMode, setIsDarkMode] = useState(false)
 
   useEffect(() => {
-    // Check for saved theme preference or use system preference
     const savedTheme = localStorage.getItem('theme')
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-
     setIsDarkMode(savedTheme === 'dark' || (!savedTheme && prefersDark))
   }, [])
 
   useEffect(() => {
-    // Apply theme to body
     document.body.classList.toggle('dark-mode', isDarkMode)
-    
-    // Save theme preference
     localStorage.setItem('theme', isDarkMode ? 'dark' : 'light')
   }, [isDarkMode])
 
@@ -27,9 +23,10 @@ export default function ClientLayout({ children }) {
   }
 
   return (
-    <>
+    <div className={isDarkMode ? 'dark-mode' : 'light-mode'}>
       <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-      <main className={isDarkMode ? 'dark' : 'light'}>{children}</main>
-    </>
+      <main>{children}</main>
+      <Contact />
+    </div>
   )
 }

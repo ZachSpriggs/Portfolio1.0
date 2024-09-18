@@ -17,7 +17,7 @@ export default function Navbar({ isDarkMode, toggleDarkMode }) {
       }`}
     >
       <div className={styles.navbarContainer}>
-        <Link className={styles.logo} href="#whoIAm">
+        <Link className={styles.logo} href="/">
           Zach Spriggs
         </Link>
         <div className={`${styles.navItems} ${isOpen ? styles.open : ""}`}>
