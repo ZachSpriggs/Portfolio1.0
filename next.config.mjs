@@ -11,6 +11,10 @@ const nextConfig = {
   },
   output: "export",  
   reactStrictMode: true,
+  swcMinify: true,
+  images: {
+    domains: ['your-image-domain.com'], // Add your image domain here if you're using external images
+  },
   webpack: (config) => {
     config.resolve.alias['@'] = path.join(__dirname, 'src');
     return config;
