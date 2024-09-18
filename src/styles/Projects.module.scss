@@ -1,99 +1,65 @@
 .projectsContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 20px;
-  padding: 20px;
+  max-width: 1200px;
 }
 
-.projectLink {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.flipCard {
-  background-color: transparent;
+.projectCard {
   width: 100%;
-  height: 300px;
-  perspective: 1000px;
-}
-
-.flipCardInner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-}
-
-.flipCard:hover .flipCardInner {
-  transform: rotateY(180deg);
-}
-
-.flipCardFront, .flipCardBack {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.flipCardFront {
-  background-color: #f8f8f8;
-  color: #333;
-  z-index: 2;
+  border: 3px solid black;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
+  background-color: white;
+  overflow: hidden;
+  height: 100%; 
 }
 
-.flipCardBack {
-  background-color: #333;
-  color: white;
-  transform: rotateY(180deg);
+.cardFront {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+  height: 100%; // Take full height of the card
 }
 
 .titleBar {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  border-radius: 5px 5px 0 0;
+  background-color: grey;
+  margin-bottom: 1rem;
+  & h3{
+    margin-left: .5rem;
+    color: white;
+  }
+}
+
+
+.cardContent {
+  padding: 1rem;
+  flex-grow: 1; // Allow this to grow and push technologiesGrid to bottom
+  display: flex;
+  flex-direction: column;
+  margin-left: .5rem;
 }
 
 .elevatorPitch {
-  font-size: 0.9em;
-  margin: 10px 0;
+  margin-bottom: 1rem;
+  margin-left: .5rem;
 }
 
 .teamSize {
-  font-size: 0.8em;
+  margin-top: auto; // Push this to the bottom of cardContent
+  margin-left: .5rem;
 }
 
 .technologiesGrid {
+  background-color: grey;
+  padding: 1rem;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 5px;
+  justify-content: space-evenly;
+  margin-top: auto; 
 }
 
-.techIcon {
-  background-color: #e0e0e0;
-  padding: 5px 10px;
-  border-radius: 15px;
-  font-size: 0.8em;
+@media (max-width: 768px) {
+  .projectsContainer {
+    grid-template-columns: 1fr;
+  }
 }
-
-.projectDetail {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-

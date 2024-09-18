@@ -43,10 +43,14 @@ function ProjectCard({
   team,
   id
 }) {
- 
+  const projectData = { title, description, duration, technologies, elevator_pitch, team_size, team, id };
+  const urlTitle = title.toLowerCase().replace(/\s+/g, '-');
+
 
   return (
+    
     <div className={styles.projectCard}>
+      <Link href={{ pathname: `/projects/${urlTitle}`, query: { project: JSON.stringify(projectData) } }}>
         <div className={styles.cardFront}>
           <div className={styles.titleBar}>
             <h3>{title}</h3>
@@ -72,8 +76,8 @@ function ProjectCard({
           </div>
         </div>
         
+      </Link>
       </div>
-    
   );
 }
 
