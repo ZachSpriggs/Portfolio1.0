@@ -1,29 +1,21 @@
-.section {
-  padding: 1rem;
-  // overflow: hidden;
-  position: relative;
-  padding: 0;
-  height: auto;
+.projectsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
 }
 
-.projectsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
-  gap: 2rem;
-  padding: 0 .5rem;
-  padding-left: 0;
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
+.projectLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .flipCard {
-  background-color: var(--card-color);
+  background-color: transparent;
   width: 100%;
-  height: 500px;
+  height: 300px;
   perspective: 1000px;
-  cursor: pointer;
-
 }
 
 .flipCardInner {
@@ -31,119 +23,77 @@
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.8s;
-  border: 5px solid black;
+  transition: transform 0.6s;
   transform-style: preserve-3d;
 }
 
-.flipCard.isFlipped .flipCardInner,
-.flipCardInner.flipped {
+.flipCard:hover .flipCardInner {
   transform: rotateY(180deg);
 }
 
-.flipCardFront,
-.flipCardBack {
+.flipCardFront, .flipCardBack {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .flipCardFront {
-  background-color: var(--card-color);
-  color: var(--card-text-color);
+  background-color: #f8f8f8;
+  color: #333;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
 }
 
-
 .flipCardBack {
-  background-color: var(--card-color);
-  color: var(--card-text-color);
+  background-color: #333;
+  color: white;
   transform: rotateY(180deg);
-  justify-content: space-evenly;
-  & strong {
-    margin: 1rem;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .titleBar {
-  background-color: var(--card-title-color);
-  color: var(--card-text-color);
-  padding: 0.5rem;
-  width: 100%;
-
-  h3 {
-    margin: 0;
-  }
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
 }
 
 .elevatorPitch {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
-  color: var(--elevator-pitch);
-  top: 0;
+  font-size: 0.9em;
+  margin: 10px 0;
+}
 
-  & strong {
-    align-items: center;
-  }
+.teamSize {
+  font-size: 0.8em;
 }
 
 .technologiesGrid {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  gap: 0.5rem;
-  padding: 0.5rem;
-  background-color: var(--card-title-color);
-}
-
-.teamSize {
-  margin-top: 10rem;
-  font-size: 0.9rem;
-  color: var(--elevator-pitch);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-@media (max-width: 768px){
-  .flipCardFront,
-.flipCardBack {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  // overflow: hidden;
-}
-.elevatorPitch {
-  flex-grow: 1;
-  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  padding: 1rem;
-  color: black;
-  top: 0;
-
-  & strong {
-    align-items: center;
-  }
+  gap: 5px;
 }
 
-  .teamSize {
-    margin-top: 1rem;
-    margin-bottom: .7rem;
-    flex-grow: 1;
-    position: relative;
-  }
+.techIcon {
+  background-color: #e0e0e0;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8em;
+}
+
+.projectDetail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
