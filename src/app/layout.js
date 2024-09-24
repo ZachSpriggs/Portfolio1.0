@@ -1,23 +1,16 @@
-import { Inter } from 'next/font/google'
-import './globals.css'
-import "@/styles/globals.scss";
-import ClientLayout from './ClientLayout'
+'use client'
 
+import { Montserrat } from "next/font/google";
+import ClientLayout from "./ClientLayout";
 
-const inter = Inter({ subsets: ['latin'] })
-
-export const metadata = {
-  title: 'Zach Spriggs Portfolio',
-  description: 'Portfolio website of Zach Spriggs',
-}
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        
+    <html lang="en" className={montserrat.className}>
+      <body>
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
-  )
+  );
 }

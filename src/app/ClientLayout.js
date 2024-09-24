@@ -1,26 +1,12 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import Navbar from '@/components/Navbar'
 import Contact from '@/components/Contact'
+import useDarkMode from './hooks/darkMode'
 
 export default function ClientLayout({ children }) {
-  const [isDarkMode, setIsDarkMode] = useState(false)
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme')
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    setIsDarkMode(savedTheme === 'dark' || (!savedTheme && prefersDark))
-  }, [])
-
-  useEffect(() => {
-    document.body.classList.toggle('dark-mode', isDarkMode)
-    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light')
-  }, [isDarkMode])
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode)
-  }
+  const [isDarkMode, toggleDarkMode] = useDarkMode();
 
   return (
     <div className={isDarkMode ? 'dark-mode' : 'light-mode'}>
