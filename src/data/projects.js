@@ -1,6 +1,7 @@
 export const projects = [
   {
     id: 1,
+    url: "mama-group",
     title: "Mama Restaurant Group",
     elevator_pitch: "Built website(s) for restaurant group ",
     duration: "16 Weeks",
@@ -15,6 +16,7 @@ export const projects = [
   },
   {
     id: 2,
+    url: "vuniverse",
     title: "VUniverse",
     elevator_pitch:
       "Frontend Development for streaming service in React Native",
@@ -31,6 +33,7 @@ export const projects = [
   },
   {
     id: 3,
+    url: "fundstory",
     title: "FundStory",
     elevator_pitch: "Financial Planning and Analysis software for Founders",
     duration: "24 Weeks",
@@ -45,6 +48,7 @@ export const projects = [
   },
   {
     id: 4,
+    url: "operations-analytics",
     title: "Operations Analytics",
     elevator_pitch:
       "Metrics analysis and automation for Operations teams at DoorDash",

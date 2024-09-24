@@ -1,10 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import styles from "@/styles/Projects.module.scss";
 import { projects } from "@/data/projects";
-import Link from 'next/link';
 import NodeJS from "@/logos/nodejs.svg";
 import Android from "@/logos/android.svg";
 import Django from "@/logos/django.svg";
@@ -33,47 +32,34 @@ const technologyIcons = {
   Snowflake,
 };
 
-function ProjectCard({
-  title,
-  description,
-  duration,
-  technologies,
-  elevator_pitch,
-  team_size,
-  team,
-  id
-}) {
- 
-
+function ProjectCard({ title, url, elevator_pitch, duration, team, team_size, technologies }) {
+  console.log(`Generating card for project: ${title}, url: ${url}`);
   return (
-    <div className={styles.projectCard}>
-        <div className={styles.cardFront}>
-          <div className={styles.titleBar}>
-            <h3>{title}</h3>
-          </div>
-          <strong className={styles.elevatorPitch}>{elevator_pitch}</strong>
-          <div className={styles.teamSize}>
-            <strong>Time Line: {duration}</strong>
-            <h4>{team} Project</h4>
-            {team_size.map((member, index) => (
-              <p key={index}>{member}</p>
-            ))}
-          </div>
-          <div className={styles.technologiesGrid}>
-            {technologies.map((tech, index) => (
-              <Image
-                key={index}
-                src={technologyIcons[tech]}
-                alt={tech}
-                width={30}
-                height={30}
-              />
-            ))}
-          </div>
+    <Link href={`/projects/${url}`} className={styles.projectCard}>
+      <div className={styles.cardFront}>
+        <div className={styles.titleBar}>
+          <h3>{title}</h3>
         </div>
-        
+        <strong className={styles.elevatorPitch}>{elevator_pitch}</strong>
+        <div className={styles.teamSize}>
+          <strong>Time Line: {duration}</strong>
+          <h4>{team} Project</h4>
+          {team_size.map((member, index) => (
+            <p key={index}>{member}</p>
+          ))}
+        </div>
+        <div className={styles.technologiesGrid}>
+          {technologies.map((tech, index) => {
+            const IconComponent = technologyIcons[tech];
+            return IconComponent ? (
+              <IconComponent key={index} width={30} height={30} />
+            ) : (
+              <span key={index}>{tech}</span>
+            );
+          })}
+        </div>
       </div>
-    
+    </Link>
   );
 }
 
@@ -81,7 +67,7 @@ export default function Projects() {
   return (
     <div className={styles.projectsContainer}>
       {projects.map((project) => (
-        <ProjectCard key={project.id} {...project}/>
+        <ProjectCard key={project.id} {...project} />
       ))}
     </div>
   );

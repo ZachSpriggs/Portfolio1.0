@@ -2,7 +2,8 @@
   min-height: 20vh;
   display: flex;
   flex-direction: column;
-  // padding: 20px 0; 
+  margin-left: 3rem;
+  margin-bottom: 1rem;
 }
 
 .contactGrid {
@@ -11,13 +12,14 @@
   align-items: left;
   flex-wrap: wrap;
   gap: 20px; 
+
 }
 
 .contactCard {
-  border: 5px solid black;
-  background-color: white;
+  border: 5px solid var(--card-border);
+  background-color: var(--card-color);
   font-weight: bold;
-  color: black;
+  color: var(--card-text-color);
   width: calc(20% - 20px);
   min-height: 150px; 
   margin: 0;
@@ -29,7 +31,7 @@
   align-items: center;
   // box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
   & a {
-    color: black;
+    color: var(--card-text-color);
     text-decoration: none;
   }
 }
