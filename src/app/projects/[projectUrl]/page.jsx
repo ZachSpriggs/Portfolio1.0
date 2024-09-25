@@ -1,8 +1,6 @@
 import { projects } from "@/data/projects";
-import MamaGroup from "@/components/MamaGroup";
-import Vuniverse from "@/components/Vuniverse";
-import FundStory from "@/components/FundStory";
-import OperationsAnalytics from "@/components/DashMart";
+import Project from "@/components/Project";
+
 
 export default function ProjectPage({ params }) {
   console.log("Rendering ProjectPage, params:", params);
@@ -18,10 +16,10 @@ export default function ProjectPage({ params }) {
   }
 
   const ProjectComponent = {
-    "mama-group": MamaGroup,
-    "vuniverse": Vuniverse,
-    "fundstory": FundStory,
-    "dashmart": OperationsAnalytics
+    "mama-group": Project,
+    "vuniverse": Project,
+    "fundstory": Project,
+    "dashmart": Project
   }[projectUrl];
 
   console.log("ProjectComponent:", ProjectComponent);

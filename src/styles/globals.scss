@@ -1,5 +1,4 @@
 $color-text: black;
-// $color-background: #e8e8e8;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
 
@@ -29,9 +28,23 @@ body.dark-mode {
   --card-title-color: #121212;
   --elevator-pitch: #121212;
   --card-border: white;
-  
 }
 
+html, body {
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+
+
+html::-webkit-scrollbar, 
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+body {
+  min-height: 100vh;
+}
 
 html,
 body {
@@ -42,8 +55,7 @@ body {
   padding: 0;
   margin: 0;
   height: 100%; 
-  // background-color: var(--background-color);
-  // color: var(--text-color);
+
 }
 
 body {
@@ -103,7 +115,6 @@ html {
   }
 }
 
-// Ensure content is always scrollable
 #__next {
   min-height: 100vh;
   display: flex;

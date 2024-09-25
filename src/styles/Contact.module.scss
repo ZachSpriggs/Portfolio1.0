@@ -29,9 +29,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
   & a {
-    color: var(--card-text-color);
+    color: var(--card-border);
     text-decoration: none;
   }
 }
@@ -40,6 +39,8 @@
   .contact {
     min-height: 100vh;
     padding: 10px 0;
+    margin-left: .75rem;
+    margin-bottom: 0;
   }
 
   .contactGrid {
@@ -50,10 +51,9 @@
   .contactCard {
     width: calc(100vw - 18%);
     min-height: 100px; 
-    // box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.5);
 
     & a {
-      color: black;
+      color: var(--card-border);
       text-decoration: none;
     }
   }

@@ -33,7 +33,6 @@ const technologyIcons = {
 };
 
 function ProjectCard({ title, url, elevator_pitch, duration, team, team_size, technologies }) {
-  console.log(`Generating card for project: ${title}, url: ${url}`);
   return (
     <Link href={`/projects/${url}`} className={styles.projectCard}>
       <div className={styles.cardFront}>
