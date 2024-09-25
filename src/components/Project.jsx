@@ -1,45 +1,48 @@
-import React from 'react'
-import Image from 'next/image';
-import Link from 'next/link';
-import styles from '@/styles/Projects.module.scss';
+import React from 'react';
+import styles from '@/styles/Project.module.scss';
 
 const Project = ({ project }) => {
-  const projectSlug = encodeURIComponent(project.title.toLowerCase().replace(/\s+/g, '-'));
+  console.log("Rendering MamaGroup component, project:", project);
+  
+  if (!project) {
+    return <div>Project data not available</div>;
+  }
 
   return (
-    <Link 
-      href={`/projects/${projectSlug}`}
-      className={styles.projectLink}
-    >
-      <div className={styles.flipCard}>
-        <div className={styles.flipCardInner}>
-          <div className={styles.flipCardFront}>
-            <div className={styles.titleBar}>
-              <h3>{project.title}</h3>
-            </div>
-            <Image src={project.image} alt={project.title} width={500} height={300} className={styles.projectImage} />
-            <strong className={styles.elevatorPitch}>{project.elevator_pitch}</strong>
-            <div className={styles.teamSize}>
-              <strong>Time Line: {project.duration}</strong>
-              <h4>{project.team} Project</h4>
-              {project.team_size.map((member, index) => (
-                <p key={index}>{member}</p>
-              ))}
-            </div>
-            <div className={styles.technologiesGrid}>
-              {project.technologies.map((tech, index) => (
-                <span key={index} className={styles.techIcon}>{tech}</span>
-              ))}
-            </div>
-          </div>
-          <div className={styles.flipCardBack}>
-            <h3>{project.title}</h3>
-            <strong>{project.description}</strong>
-          </div>
+    <div className={styles.projectContainer}>
+      <h1 className={styles.projectTitle}>{project.title}</h1>
+      <p className={styles.elevatorPitch}>{project.elevator_pitch}</p>
+      
+      <div className={styles.projectDetails}>
+        <div className={styles.detailItem}>
+          <h3>Duration:</h3>
+          <p>{project.duration}</p>
+        </div>
+        <div className={styles.detailItem}>
+          <h3>Team:</h3>
+          <p>{project.team}</p>
+        </div>
+        <div className={styles.detailItem}>
+          <h3>Team Size:</h3>
+          <ul>
+            {project.team_size.map((member, index) => (
+              <li key={index}>{member}</li>
+            ))}
+          </ul>
         </div>
       </div>
-    </Link>
-  )
-}
 
-export default Project
+      <h3>Technologies Used:</h3>
+      <div className={styles.technologiesGrid}>
+        {project.technologies.map((tech, index) => (
+          <span key={index} className={styles.techIcon}>{tech}</span>
+        ))}
+      </div>
+
+      <h3>Project Description:</h3>
+      <p className={styles.projectDescription}>{project.description}</p>
+    </div>
+  );
+};
+
+export default Project;
