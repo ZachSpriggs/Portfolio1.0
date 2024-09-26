@@ -1,16 +1,16 @@
 import { projects } from "@/data/projects";
 import Project from "@/components/Project";
-
+import "@/styles/globals.scss"; // Ensure global styles are imported
 
 export default function ProjectPage({ params }) {
   console.log("Rendering ProjectPage, params:", params);
   const { projectUrl } = params;
   console.log("ProjectUrl:", projectUrl);
-  
+
   const project = projects.find(p => p.url === projectUrl);
   console.log("Found project:", project);
 
-  if (!project) {
+  if (!project) {x
     console.log("Project not found");
     return <div>Project not found</div>;
   }

@@ -16,6 +16,7 @@ export const projects = [
     team_size: ["Developer: Myself", "UI/UX Designer", "Art Director"],
     technologies: ["NodeJS", "Vue", "ReactIcon", "Sass", "Figma", "Mongo"],
     team: "Design Team(3)",
+    tech_stack: [],
     pain_point: `
     Our original software, while functional for internal use, lacked the scalability and modularity required 
     for a SaaS product. This limitation posed a significant challenge to our goal of expanding our software offering 
@@ -49,6 +50,7 @@ export const projects = [
     `,
     team_size: ["Frontend: Myself", "Backend: Senior Developer"],
     technologies: ["ReactIcon", "Figma", "Sass"],
+    tech_stack: [],
     team: "Dev Team(2)",
     pain_point: ``,
     solution: ``,
@@ -67,6 +69,7 @@ export const projects = [
     `,
     team_size: ["Full Stack: Myself", "Full Stack: Senior Engineer"],
     technologies: ["NodeJS", "ReactIcon", "Mongo", "Figma", "Sass", "Python"],
+    tech_stack: [],
     team: "Dev Team(2)",
     pain_point: ``,
     solution: ``,
@@ -87,6 +90,7 @@ export const projects = [
     `,
     team_size: ["Developer(s): Myself"],
     technologies: ["Python", "SQL", "Snowflake", "Django"],
+    tech_stack: [],
     team: "Solo",
     pain_point: ``,
     solution: ``,
