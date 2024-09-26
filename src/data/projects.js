@@ -3,23 +3,29 @@ export const projects = [
     id: 1,
     url: "mama-group",
     title: "Mama Restaurant Group",
-    elevator_pitch: "Built website(s) for restaurant group ",
+    elevator_pitch: "Lead development of restaurant based software",
     duration: "16 Weeks",
-    description: `I came into this project late and had a good amount of code built out already. 
-    Initially, this project was built in Vue but was done so without scalability in mind. Elements were hard coded
-    that should have been components so my primary task was finalizing designs from Figma, as well as 
-    making the code more scalable. Eventually this led to the project above, which was a full refactor of the code base. 
+    description: 
+    `
+    Our software at Mama Restaurant Group was designed for internal use. However, the plan was to turn it into a SaaS based 
+    template for other restaurant groups to adopt. Due to this plan, everything that I built had to be scalable and ready to package
+    up for other groups. We utilized a MEVN tech stack for code, Netlify for frontend deployment, and Heroku for backend deployment. 
+    We also integrated Plasmic as a new CMS to provide our restaurant managers to easily make updates to restaurant information 
+    on the fly, including menu items. Part of this process required me to pull all of our menu items from each restaurant using the Square API, 
     `,
     team_size: ["Developer: Myself", "UI/UX Designer", "Art Director"],
     technologies: ["NodeJS", "Vue", "ReactIcon", "Sass", "Figma", "Mongo"],
     team: "Design Team(3)",
+    pain_point: ``,
+    solution: ``,
+    takeaway: ``,
   },
   {
     id: 2,
     url: "vuniverse",
     title: "VUniverse",
     elevator_pitch:
-      "Frontend Development for streaming service in React Native",
+      "Streaming service mobile application designed to organize streaming services",
     duration: "20 Weeks",
     description: `Utlized Figma templates to create the frontend for a streaming service application with React-Native.
     I had no React-Native experience coming into this project, but using the documentation to teach myself, I was able to 
@@ -30,6 +36,9 @@ export const projects = [
     team_size: ["Frontend: Myself", "Backend: Senior Developer"],
     technologies: ["ReactIcon", "Figma", "Sass"],
     team: "Dev Team(2)",
+    pain_point: ``,
+    solution: ``,
+    takeaway: ``,
   },
   {
     id: 3,
@@ -45,6 +54,9 @@ export const projects = [
     team_size: ["Full Stack: Myself", "Full Stack: Senior Engineer"],
     technologies: ["NodeJS", "ReactIcon", "Mongo", "Figma", "Sass", "Python"],
     team: "Dev Team(2)",
+    pain_point: ``,
+    solution: ``,
+    takeaway: ``,
   },
   {
     id: 4,
@@ -62,6 +74,9 @@ export const projects = [
     team_size: ["Developer(s): Myself"],
     technologies: ["Python", "SQL", "Snowflake", "Django"],
     team: "Solo",
+    pain_point: ``,
+    solution: ``,
+    takeaway: ``,
   },
 ];
 
