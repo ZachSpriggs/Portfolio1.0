@@ -3,22 +3,36 @@ export const projects = [
     id: 1,
     url: "mama-group",
     title: "Mama Restaurant Group",
-    elevator_pitch: "Lead development of restaurant based software",
+    elevator_pitch: "Led development of restaurant based software",
     duration: "16 Weeks",
-    description: 
-    `
-    Our software at Mama Restaurant Group was designed for internal use. However, the plan was to turn it into a SaaS based 
-    template for other restaurant groups to adopt. Due to this plan, everything that I built had to be scalable and ready to package
-    up for other groups. We utilized a MEVN tech stack for code, Netlify for frontend deployment, and Heroku for backend deployment. 
-    We also integrated Plasmic as a new CMS to provide our restaurant managers to easily make updates to restaurant information 
-    on the fly, including menu items. Part of this process required me to pull all of our menu items from each restaurant using the Square API, 
+    description: `
+    At Mama Restaurant Group, I led the development of internal software with the vision of transforming it into a 
+    SaaS template for other restaurant groups. This ambitious goal required building scalable, packageable solutions 
+    from the ground up. We employed a MEVN stack, with Netlify for frontend and Heroku for backend deployment. A key 
+    innovation was integrating Plasmic CMS, enabling restaurant managers to easily update information, including menu 
+    items. I also developed a process to pull menu data from the Square API, manipulate it, and batch upload to our CMS, 
+    streamlining operations across all our restaurants.
     `,
     team_size: ["Developer: Myself", "UI/UX Designer", "Art Director"],
     technologies: ["NodeJS", "Vue", "ReactIcon", "Sass", "Figma", "Mongo"],
     team: "Design Team(3)",
-    pain_point: ``,
-    solution: ``,
-    takeaway: ``,
+    pain_point: `
+    Our original software, while functional for internal use, lacked the scalability and modularity required 
+    for a SaaS product. This limitation posed a significant challenge to our goal of expanding our software offering 
+    to other restaurant groups.
+    `,
+    solution: `
+    To address this, we undertook a comprehensive restructuring of our codebase. We broke down the software into modular, 
+    templated components, each designed with flexibility in mind. This approach allowed us to create dynamic sections that 
+    could easily pull data from our CMS and adapt to custom designs for each client. The result was a highly adaptable system 
+    that could be tailored to diverse restaurant group needs without sacrificing consistency or functionality.
+    `,
+    takeaway: `
+    This project was a transformative experience in my development career. Diving deep into system architecture and design 
+    principles fundamentally changed my approach to software development. It taught me to think beyond individual features 
+    and consider the broader implications of scalability, modularity, and long-term maintainability. This shift in perspective 
+    has profoundly influenced how I tackle complex development challenges, making me a more strategic and forward-thinking developer.
+    `,
   },
   {
     id: 2,
@@ -79,4 +93,3 @@ export const projects = [
     takeaway: ``,
   },
 ];
-
