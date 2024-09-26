@@ -1,12 +1,14 @@
 import React from 'react';
 import styles from '@/styles/Project.module.scss';
 
+
 const Project = ({ project }) => {
   console.log("Rendering MamaGroup component, project:", project);
   
   if (!project) {
     return <div>Project data not available</div>;
   }
+
 
   return (
     <div className={styles.projectContainer}>
@@ -18,10 +20,10 @@ const Project = ({ project }) => {
           <h3>Duration:</h3>
           <p>{project.duration}</p>
         </div>
-        <div className={styles.detailItem}>
+        {/* <div className={styles.detailItem}>
           <h3>Team:</h3>
           <p>{project.team}</p>
-        </div>
+        </div> */}
         <div className={styles.detailItem}>
           <h3>Team Size:</h3>
           <ul>
@@ -31,12 +33,13 @@ const Project = ({ project }) => {
           </ul>
         </div>
       </div>
-
       <h3>Technologies Used:</h3>
       <div className={styles.technologiesGrid}>
-        {project.technologies.map((tech, index) => (
-          <span key={index} className={styles.techIcon}>{tech}</span>
-        ))}
+        <ul>
+          {project.technologies.map((tech, index) => (
+            <li key={index} className={styles.techIcon}>{tech}</li>
+          ))}
+        </ul>
       </div>
 
       <h3>Project Description:</h3>

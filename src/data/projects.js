@@ -3,23 +3,43 @@ export const projects = [
     id: 1,
     url: "mama-group",
     title: "Mama Restaurant Group",
-    elevator_pitch: "Built website(s) for restaurant group ",
+    elevator_pitch: "Led development of restaurant based software",
     duration: "16 Weeks",
-    description: `I came into this project late and had a good amount of code built out already. 
-    Initially, this project was built in Vue but was done so without scalability in mind. Elements were hard coded
-    that should have been components so my primary task was finalizing designs from Figma, as well as 
-    making the code more scalable. Eventually this led to the project above, which was a full refactor of the code base. 
+    description: `
+    At Mama Restaurant Group, I led the development of internal software with the vision of transforming it into a 
+    SaaS template for other restaurant groups. This ambitious goal required building scalable, packageable solutions 
+    from the ground up. We employed a MEVN stack, with Netlify for frontend and Heroku for backend deployment. A key 
+    innovation was integrating Plasmic CMS, enabling restaurant managers to easily update information, including menu 
+    items. I also developed a process to pull menu data from the Square API, manipulate it, and batch upload to our CMS, 
+    streamlining operations across all our restaurants.
     `,
     team_size: ["Developer: Myself", "UI/UX Designer", "Art Director"],
     technologies: ["NodeJS", "Vue", "ReactIcon", "Sass", "Figma", "Mongo"],
     team: "Design Team(3)",
+    pain_point: `
+    Our original software, while functional for internal use, lacked the scalability and modularity required 
+    for a SaaS product. This limitation posed a significant challenge to our goal of expanding our software offering 
+    to other restaurant groups.
+    `,
+    solution: `
+    To address this, we undertook a comprehensive restructuring of our codebase. We broke down the software into modular, 
+    templated components, each designed with flexibility in mind. This approach allowed us to create dynamic sections that 
+    could easily pull data from our CMS and adapt to custom designs for each client. The result was a highly adaptable system 
+    that could be tailored to diverse restaurant group needs without sacrificing consistency or functionality.
+    `,
+    takeaway: `
+    This project was a transformative experience in my development career. Diving deep into system architecture and design 
+    principles fundamentally changed my approach to software development. It taught me to think beyond individual features 
+    and consider the broader implications of scalability, modularity, and long-term maintainability. This shift in perspective 
+    has profoundly influenced how I tackle complex development challenges, making me a more strategic and forward-thinking developer.
+    `,
   },
   {
     id: 2,
     url: "vuniverse",
     title: "VUniverse",
     elevator_pitch:
-      "Frontend Development for streaming service in React Native",
+      "Streaming service mobile application designed to organize streaming services",
     duration: "20 Weeks",
     description: `Utlized Figma templates to create the frontend for a streaming service application with React-Native.
     I had no React-Native experience coming into this project, but using the documentation to teach myself, I was able to 
@@ -30,6 +50,9 @@ export const projects = [
     team_size: ["Frontend: Myself", "Backend: Senior Developer"],
     technologies: ["ReactIcon", "Figma", "Sass"],
     team: "Dev Team(2)",
+    pain_point: ``,
+    solution: ``,
+    takeaway: ``,
   },
   {
     id: 3,
@@ -45,6 +68,9 @@ export const projects = [
     team_size: ["Full Stack: Myself", "Full Stack: Senior Engineer"],
     technologies: ["NodeJS", "ReactIcon", "Mongo", "Figma", "Sass", "Python"],
     team: "Dev Team(2)",
+    pain_point: ``,
+    solution: ``,
+    takeaway: ``,
   },
   {
     id: 4,
@@ -62,6 +88,8 @@ export const projects = [
     team_size: ["Developer(s): Myself"],
     technologies: ["Python", "SQL", "Snowflake", "Django"],
     team: "Solo",
+    pain_point: ``,
+    solution: ``,
+    takeaway: ``,
   },
 ];
-
