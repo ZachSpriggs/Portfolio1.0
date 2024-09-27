@@ -1,8 +1,10 @@
-import React from "react";
+'use client'
+
+import React, { useEffect } from "react";
 import styles from "@/styles/Project.module.scss";
 
 const Project = ({ project }) => {
-  console.log("Rendering Project component, project:", project);
+  useEffect(() => window.document.body?.scrollTo(0,0), []);
 
   if (!project) {
     return <div>Project data not available</div>;
@@ -10,6 +12,7 @@ const Project = ({ project }) => {
 
   return (
     <div className={styles.projectContainer}>
+      <div data-nextjs-scroll-focus-boundary />
       <h1 className={styles.projectTitle}>{project.title}</h1>
       <p className={styles.elevatorPitch}>{project.elevator_pitch}</p>
 

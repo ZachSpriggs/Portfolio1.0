@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { FaLinkedin, FaGithub, FaMoon, FaSun } from "react-icons/fa";
 import styles from "../styles/Navbar.module.scss";
 
 export default function Navbar({ isDarkMode, toggleDarkMode }) {
   const [isOpen, setIsOpen] = useState(false);
-  console.log('isDarkMode in Navbar:', isDarkMode);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);

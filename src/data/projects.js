@@ -154,11 +154,19 @@ export const projects = [
     Our team was called in to try to resolve this issue. We had never faced a challenge like this before, but we sat down and started brainstorming. Our solution
     was to take measurements of each fridge and freezer. Based on the dimensions, we were able to determine exactly how much space could be utilized within our 
     constraints (only 80% of each unit could be used, with a minimum of 12 inches clearance on the top shelf). We used SQL to pull down product dimensions for each
-    perishable product in the warehouse and wrote a few algorithms in Python to 
+    perishable product in the warehouse and wrote a few algorithms in Python to calculate how many products could fit on each shelf. These algorithms also 
+    automated the process of determining where to put each product. After this work was complete, we went through and started shifting products around. 
+    Our code worked perfectly and we were able to move all products into the correct spot. Not only did we reduce shrink from ~$10k per month down to less than $1k
+    a month, we also cleared space throughout the entire warehouse. We were able to reuse these calculations for the entire warehouse and open up over 500 sq ft of 
+    additional usable space. This system was adopted by multiple sites after we completed it, drastically reducing shrink at each site, as well as opening up more 
+    usable space which allowed new products to be acquired which ultimately led to increased sales.
     `,
     takeaway: 
     `
-    
+    Approaching a problem with an unknown solution with our team proved to be a challenge. However, we were able to use a data-driven approach to resolve the issues
+    at hand. This solution had multiple ripple effects by creating multiple positive downstream effects. This project also solidified my ability to work cross-functionally
+    and approach problems from multiple angles at the same time. Not only did we solve the main problem, we solved a few secondary and tertiary problems, while creating
+    a resuable solution that was adopted by multiple sites with great success. 
     `,
   },
 ];
