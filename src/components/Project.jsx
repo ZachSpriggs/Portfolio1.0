@@ -3,7 +3,7 @@ import styles from '@/styles/Project.module.scss';
 
 
 const Project = ({ project }) => {
-  console.log("Rendering MamaGroup component, project:", project);
+  console.log("Rendering Project component, project:", project);
   
   if (!project) {
     return <div>Project data not available</div>;
@@ -20,10 +20,6 @@ const Project = ({ project }) => {
           <h3>Duration:</h3>
           <p>{project.duration}</p>
         </div>
-        {/* <div className={styles.detailItem}>
-          <h3>Team:</h3>
-          <p>{project.team}</p>
-        </div> */}
         <div className={styles.detailItem}>
           <h3>Team Size:</h3>
           <ul>

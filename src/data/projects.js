@@ -16,6 +16,7 @@ export const projects = [
     team_size: ["Developer: Myself", "UI/UX Designer", "Art Director"],
     technologies: ["NodeJS", "Vue", "ReactIcon", "Sass", "Figma", "Mongo"],
     team: "Design Team(3)",
+    tech_stack: ["NodeJS", "Vue", "Figma", "Plasmic", "Mongo", "Postgres", "SCSS", "React", "WordPress"],
     pain_point: `
     Our original software, while functional for internal use, lacked the scalability and modularity required 
     for a SaaS product. This limitation posed a significant challenge to our goal of expanding our software offering 
@@ -49,10 +50,15 @@ export const projects = [
     `,
     team_size: ["Frontend: Myself", "Backend: Senior Developer"],
     technologies: ["ReactIcon", "Figma", "Sass"],
+    tech_stack: ["React-Native", "Figma", "Expo"],
     team: "Dev Team(2)",
-    pain_point: ``,
-    solution: ``,
-    takeaway: ``,
+    pain_point: `This app was only half complete when I came onto the team. The previous dev team had left and they made 
+    no documentation during their work. I had to finish the entire mobile build, finalize backend connections, and deploy to the 
+    app and google play store.`,
+    solution: `With zero react-native experience, I had to take a react-native course to learn the basics. My background
+    in react made it pretty easy to pick up. I was able to take advantage of quality figma templates to build the frontend.`,
+    takeaway: `While I am familiar with a few different frameworks, it was an amazing experience to tackle a new challenge 
+    of building a mobile application. I'd built a small Android app prior to this, but this was entirely different. `,
   },
   {
     id: 3,
@@ -67,6 +73,7 @@ export const projects = [
     `,
     team_size: ["Full Stack: Myself", "Full Stack: Senior Engineer"],
     technologies: ["NodeJS", "ReactIcon", "Mongo", "Figma", "Sass", "Python"],
+    tech_stack: ["NodeJS", "Mongo", "Postgres", "SCSS", "React", "Redux"],
     team: "Dev Team(2)",
     pain_point: ``,
     solution: ``,
@@ -78,7 +85,7 @@ export const projects = [
     title: "Operations Analytics",
     elevator_pitch:
       "Metrics analysis and automation for Operations teams at DoorDash",
-    duration: "4 Weeks",
+    duration: "20 Weeks",
     description: `Working closely with Local Operations teams at DoorDash, I wanted to take some of the manual
     tasks away from Operations Managers. I created an automated reporting system utilizing Django and SQL queries
     in Snowflake to visual metrics. By decreasing the time spent pulling, and visualizing metrics, OMs were 
@@ -87,6 +94,7 @@ export const projects = [
     `,
     team_size: ["Developer(s): Myself"],
     technologies: ["Python", "SQL", "Snowflake", "Django"],
+    tech_stack: ["Python", "SQL", "Snowflake", "Django", "Sigma"],
     team: "Solo",
     pain_point: ``,
     solution: ``,
