@@ -13,7 +13,7 @@ export default function WorkExperience() {
       duration: "Aug 2023 - January 2024",
     },
     {
-      title: "Lead Full Stack Engineer",
+      title: "Lead Software Developer",
       company: "Mama Restaurant Group",
       duration: "Nov 2021 - June 2023",
     },
