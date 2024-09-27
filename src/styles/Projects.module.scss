@@ -12,7 +12,7 @@
   flex-direction: column;
   background-color: var(--card-color);
   overflow: hidden;
-  height: 100%; 
+  min-height: fit-content; 
   text-decoration: none;
 }
 
