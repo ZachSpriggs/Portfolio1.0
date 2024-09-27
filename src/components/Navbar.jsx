@@ -25,7 +25,7 @@ export default function Navbar({ isDarkMode, toggleDarkMode }) {
             href="https://www.linkedin.com/in/zachspriggs/"
             target="_blank"
             className={styles.navItem}
-            onClick={() => setIsOpen(false)}
+            onClick={() => setIsOpen(!isOpen)}
           >
             <FaLinkedin size={30} />
           </Link>
@@ -33,7 +33,7 @@ export default function Navbar({ isDarkMode, toggleDarkMode }) {
             href="https://github.com/ZachSpriggs"
             target="_blank"
             className={styles.navItem}
-            onClick={() => setIsOpen(false)}
+            onClick={() => setIsOpen(!isOpen)}
           >
             <FaGithub size={30} />
           </Link>
