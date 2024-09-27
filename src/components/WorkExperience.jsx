@@ -1,31 +1,5 @@
 import styles from "@/styles/WorkExperience.module.scss";
 
-// function ExperienceCard({
-//   title,
-//   company,
-//   technologies,
-//   duration,
-//   role,
-//   termination,
-// }) {
-//   return (
-//     <div className={styles.flipCard}>
-//       <div className={styles.flipCardInner}>
-//         <div className={styles.titleBar}>
-//           <h3>{title}</h3>
-//         </div>
-//         <div className={styles.content}>
-//           <p><strong>Company:</strong> {company}</p>
-//           <p><strong>Technologies:</strong> {technologies.join(", ")}</p>
-//           <p><strong>Time In Role:</strong> {duration}</p>
-//           <p><strong>Employment Type:</strong> {role}</p>
-//           <p><strong>Reason For Leaving:</strong> {termination || "N/A"}</p>
-//         </div>
-//         <div className={styles.footerBar}></div>
-//       </div>
-//     </div>
-//   );
-// }
 export default function WorkExperience() {
   const jobs = [
     {

@@ -1,17 +1,13 @@
+
 import { projects } from "@/data/projects";
 import Project from "@/components/Project";
-import "@/styles/globals.scss"; // Ensure global styles are imported
+import "@/styles/globals.scss"; 
 
 export default function ProjectPage({ params }) {
-  console.log("Rendering ProjectPage, params:", params);
   const { projectUrl } = params;
-  console.log("ProjectUrl:", projectUrl);
-
   const project = projects.find(p => p.url === projectUrl);
-  console.log("Found project:", project);
 
   if (!project) {x
-    console.log("Project not found");
     return <div>Project not found</div>;
   }
 
@@ -19,17 +15,14 @@ export default function ProjectPage({ params }) {
     "mama-group": Project,
     "vuniverse": Project,
     "fundstory": Project,
-    "dashmart": Project
+    "operations-analytics": Project
   }[projectUrl];
 
-  console.log("ProjectComponent:", ProjectComponent);
 
   if (!ProjectComponent) {
-    console.log("Project component not found");
     return <div>Project component not found</div>;
   }
 
-  console.log("Rendering ProjectComponent");
   return <ProjectComponent project={project} />;
 }
 

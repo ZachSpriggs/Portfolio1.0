@@ -21,7 +21,7 @@ export default function WhoIAm() {
               Well versed in Python and JavaScript, but proficient in Java,
               TypeScript, and C#
             </li>
-            <li>Active Secuity Clearance</li>
+            <li>Active Security Clearance</li>
           </ul>
           <p>
             While I can navigate the intricacies of user interfaces, I really

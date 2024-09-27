@@ -1,9 +1,7 @@
-'use client'
-
 import { Montserrat } from "next/font/google";
 import ClientLayout from "./ClientLayout";
 import '@/styles/globals.scss';
-import React from "react";
+import Script from 'next/script';
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 

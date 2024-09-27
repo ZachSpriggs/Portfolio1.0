@@ -34,7 +34,7 @@ const technologyIcons = {
 
 function ProjectCard({ title, url, elevator_pitch, duration, team, team_size, technologies }) {
   return (
-    <Link href={`/projects/${url}`} className={styles.projectCard}>
+    <Link href={`/projects/${url}`} className={styles.projectCard} scroll={false}>
       <div className={styles.cardFront}>
         <div className={styles.titleBar}>
           <h3>{title}</h3>
@@ -66,7 +66,7 @@ export default function Projects() {
   return (
     <div className={styles.projectsContainer}>
       {projects.map((project) => (
-        <ProjectCard key={project.id} {...project} />
+        <ProjectCard key={project.id} {...project} scroll={false}/>
       ))}
     </div>
   );
