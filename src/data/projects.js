@@ -12,7 +12,7 @@ export const projects = [
     integration was Plasmic CMS, enabling restaurant managers to easily update information, including menu 
     items. Our previous solution was WordPress for a CMS, which ended up being cluttered and difficult to 
     navigate. I also developed a process to pull menu data from the Square API, manipulate it, and batch upload to our CMS, 
-    streamlining operations across all our restaurants.
+    streamlining operations and providing one source of truth for all of our restaurants.
     `,
     team_size: ["Developer: Myself", "UI/UX Designer", "Art Director"],
     technologies: ["NodeJS", "Vue", "ReactIcon", "Sass", "Figma", "Mongo"],
@@ -135,13 +135,13 @@ export const projects = [
     `
     Leveraged SQL, Python, Snowflake, and Sigma dashboards to automate fridge and freezer allocation at DashMart sites. I worked with 
     multiple members of the data, and operations team for this project. We had to go through and gather measurements of each fridge, and 
-    freezer in one site. Due to poor allocation of products, this site was experience significant shrink because the cold products had nowhere
+    freezer in one site. Due to poor allocation of products, this site was experiencing significant shrink because the cold products had nowhere
     to be stored. Our goal was to use python to automate the process of determining where to place products in each fridge and freezer to maximize
-    storability. 
+    storage space.
     `,
     team_size: ["Developer(s): Myself", "Data Team: Multiple", "Operations Team: Multiple"],
     technologies: ["Python", "SQL", "Snowflake"],
-    tech_stack: ["Python, ", "SQL, ", "Snowflake, ", "Sigma, "],
+    tech_stack: ["Python, ", "SQL, ", "Snowflake, ", "Sigma"],
     team: "Solo",
     pain_point: 
     `
