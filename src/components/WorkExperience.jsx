@@ -5,17 +5,17 @@ export default function WorkExperience() {
     {
       title: "QA Engineer",
       company: "APS",
-      duration: "Feb 2024 - Present",
+      duration: "January 2024 - Present",
     },
     {
       title: "Site Engineer",
       company: "DoorDash",
-      duration: "Aug 2023 - January 2024",
+      duration: "August 2023 - January 2024",
     },
     {
       title: "Lead Software Developer",
       company: "Mama Restaurant Group",
-      duration: "Nov 2021 - June 2023",
+      duration: "November 2021 - June 2023",
     },
     {
       title: "Mobile Developer",
@@ -25,7 +25,7 @@ export default function WorkExperience() {
     {
       title: "Full Stack Engineer",
       company: "FundStory",
-      duration: "May 2021 - November 2021",
+      duration: "April 2021 - November 2021",
     },
     {
       title: "Teaching Assistant",

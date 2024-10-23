@@ -145,7 +145,7 @@ export const projects = [
     team: "Solo",
     pain_point: 
     `
-    The primary issue was this site was shrinking out over $10,000 worth of perishable products every week due to poor space allocation. Losing ~$300k per year
+    The primary issue was this site was shrinking out over $10,000 worth of perishable products every week due to poor space allocation. Losing ~$500k per year
     isn't a good thing for any company so we were determined to resolve this issue. Not only was shrink a major problem, but the products were crowding
     space in the warehouse which was causing carryover effects on other products, as well as making the warehouse difficult to navigate with pallets everywhere.
     `,
