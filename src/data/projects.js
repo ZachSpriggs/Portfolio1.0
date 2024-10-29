@@ -145,7 +145,7 @@ export const projects = [
     team: "Solo",
     pain_point: 
     `
-    The primary issue was this site was shrinking out over $10,000 worth of perishable products every week due to poor space allocation. Losing ~$500k per year
+    The primary issue was this site was shrinking out over $10,000 worth of perishable products every week due to poor space allocation. Losing ~$400k per year
     isn't a good thing for any company so we were determined to resolve this issue. Not only was shrink a major problem, but the products were crowding
     space in the warehouse which was causing carryover effects on other products, as well as making the warehouse difficult to navigate with pallets everywhere.
     `,
@@ -157,7 +157,7 @@ export const projects = [
     perishable product in the warehouse and wrote a few algorithms in Python to calculate how many products could fit on each shelf. These algorithms also 
     automated the process of determining where to put each product. After this work was complete, we went through and started shifting products around. 
     Our code worked perfectly and we were able to move all products into the correct spot. Not only did we reduce shrink from ~$10k per month down to less than $1k
-    a month, we also cleared space throughout the entire warehouse. We were able to reuse these calculations for the entire warehouse and open up over 500 sq ft of 
+    a month, we also cleared space throughout the entire warehouse. We were able to reuse these calculations for the entire warehouse and open up over 800 sq ft of 
     additional usable space. This system was adopted by multiple sites after we completed it, drastically reducing shrink at each site, as well as opening up more 
     usable space which allowed new products to be acquired which ultimately led to increased sales.
     `,
