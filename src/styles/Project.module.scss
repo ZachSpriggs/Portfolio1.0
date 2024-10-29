@@ -35,3 +35,25 @@
     width: 100%;
   }
 }
+
+.projectLinks {
+  a {
+    color: black;
+    font-weight: 600;
+  }
+}
+
+.projectImage {
+  width: 80%;
+  margin: 1rem 0;
+  max-width: 80%;
+  height: auto;
+}
+
+@media (max-width: 768px){
+  .projectImage {
+    height: 25vh;
+    width: 100%;
+    max-width: 100%;
+  }
+}

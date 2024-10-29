@@ -15,7 +15,8 @@ export default function ProjectPage({ params }) {
     "mama-group": Project,
     "vuniverse": Project,
     "fundstory": Project,
-    "operations-analytics": Project
+    "operations-analytics": Project,
+    "frontend-practice": Project
   }[projectUrl];
 
 

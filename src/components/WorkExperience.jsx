@@ -8,7 +8,7 @@ export default function WorkExperience() {
       duration: "January 2024 - Present",
     },
     {
-      title: "Site Engineer",
+      title: "Software Engineer",
       company: "DoorDash",
       duration: "August 2023 - January 2024",
     },
@@ -18,7 +18,7 @@ export default function WorkExperience() {
       duration: "November 2021 - June 2023",
     },
     {
-      title: "Mobile Developer",
+      title: "Mobile Engineer",
       company: "VUniverse",
       duration: "May 2021 - November 2021",
     },

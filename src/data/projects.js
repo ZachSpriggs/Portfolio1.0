@@ -169,4 +169,29 @@ export const projects = [
     a resuable solution that was adopted by multiple sites with great success. 
     `,
   },
+  {
+    id: 5,
+    url: "frontend-practice",
+    title: "Frontend Practice",
+    elevator_pitch:
+      "Frontend based assignment on User Experience",
+    duration: "1 Week",
+    description: 
+    `
+    This was a very simple frontend assignment for a UX course I'm in. I designed this website based on a user requirements 
+    document. Utilized React with TypeScript and Scss, as well as bootstrap. 
+    `,
+    team_size: ["Developer(s): Myself"],
+    technologies: ["TypeScript", "Sass", "ReactIcon"],
+    tech_stack: ["TypeScript, ", "SCSS, ", "React, ", "Bootstrap"],
+    team: "Solo",
+    links: {
+      website: "https://taniti-prototype-2024.netlify.app/",
+      github: "https://github.com/ZachSpriggs/Taniti"
+    },
+    image: "/taniti.png",
+    pain_point: "",
+    solution: "",
+    takeaway: "",
+  },
 ];

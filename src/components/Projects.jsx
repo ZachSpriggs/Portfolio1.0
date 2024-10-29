@@ -16,6 +16,7 @@ import Vue from "@/logos/vue.svg";
 import Next from "@/logos/next.svg";
 import SQL from "@/logos/sql.svg";
 import Snowflake from "@/logos/snowflake.svg";
+import TypeScript from "@/logos/typescript.svg";
 
 const technologyIcons = {
   NodeJS,
@@ -30,6 +31,7 @@ const technologyIcons = {
   Next,
   SQL,
   Snowflake,
+  TypeScript
 };
 
 function ProjectCard({ title, url, elevator_pitch, duration, team, team_size, technologies }) {
